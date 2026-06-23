@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/translate.py", "use": "@vercel/python" },
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/translate", "dest": "/api/translate.py" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
